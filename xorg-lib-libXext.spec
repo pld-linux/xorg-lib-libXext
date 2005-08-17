@@ -17,6 +17,7 @@ BuildRequires:	libtool
 BuildRequires:	pkg-config
 BuildRequires:	xorg-util-util-macros
 BuildRequires:	xorg-proto-xextproto-devel
+Obsoletes:	libXext
 BuildRoot:	%{tmpdir}/libXext-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
@@ -36,6 +37,7 @@ Group:		X11/Development/Libraries
 Requires:	xorg-lib-libXext = %{version}-%{release}
 Requires:	xorg-lib-libX11-devel
 Requires:	xorg-proto-xextproto-devel
+Obsoletes:	libXext-devel
 
 %description devel
 X extension library.
@@ -55,6 +57,7 @@ Summary:	Static libXext libraries
 Summary(pl):	Biblioteki statyczne libXext
 Group:		Development/Libraries
 Requires:	xorg-lib-libXext-devel = %{version}-%{release}
+Obsoletes:	libXext-static
 
 %description static
 X extension library.
