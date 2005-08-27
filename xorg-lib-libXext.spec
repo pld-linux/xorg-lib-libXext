@@ -1,5 +1,3 @@
-
-#
 Summary:	X extension library
 Summary(pl):	Biblioteka rozszerzeñ X
 Name:		xorg-lib-libXext
@@ -12,13 +10,13 @@ Source0:	http://xorg.freedesktop.org/X11R7.0-RC0/lib/libXext-%{version}.tar.bz2
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	xorg-lib-libX11-devel
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 0.19
-BuildRequires:	xorg-util-util-macros
+BuildRequires:	xorg-lib-libX11-devel
 BuildRequires:	xorg-proto-xextproto-devel
+BuildRequires:	xorg-util-util-macros
 Obsoletes:	libXext
-BuildRoot:	%{tmpdir}/libXext-%{version}-root-%(id -u -n)
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
 %define		_mandir		%{_prefix}/man
@@ -29,12 +27,11 @@ X extension library.
 %description -l pl
 Biblioteka rozszerzeñ X.
 
-
 %package devel
 Summary:	Header files libXext development
 Summary(pl):	Pliki nag³ówkowe do biblioteki libXext
 Group:		X11/Development/Libraries
-Requires:	xorg-lib-libXext = %{version}-%{release}
+Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-lib-libX11-devel
 Requires:	xorg-proto-xextproto-devel
 Obsoletes:	libXext-devel
@@ -51,12 +48,11 @@ Biblioteka rozszerzeñ X.
 Pakiet zawiera pliki nag³ówkowe niezbêdne do kompilowania programów
 u¿ywaj±cych biblioteki libXext.
 
-
 %package static
-Summary:	Static libXext libraries
-Summary(pl):	Biblioteki statyczne libXext
-Group:		Development/Libraries
-Requires:	xorg-lib-libXext-devel = %{version}-%{release}
+Summary:	Static libXext library
+Summary(pl):	Biblioteka statyczna libXext
+Group:		X11/Development/Libraries
+Requires:	%{name}-devel = %{version}-%{release}
 Obsoletes:	libXext-static
 
 %description static
@@ -69,10 +65,8 @@ Biblioteka rozszerzeñ X.
 
 Pakiet zawiera statyczn± bibliotekê libXext.
 
-
 %prep
 %setup -q -n libXext-%{version}
-
 
 %build
 %{__libtoolize}
@@ -96,20 +90,17 @@ rm -rf $RPM_BUILD_ROOT
 %post	-p /sbin/ldconfig
 %postun	-p /sbin/ldconfig
 
-
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog
-%attr(755,root,wheel) %{_libdir}/libXext.so.*
-
+%attr(755,root,root) %{_libdir}/libXext.so.*.*.*
 
 %files devel
 %defattr(644,root,root,755)
+%attr(755,root,root) %{_libdir}/libXext.so
 %{_libdir}/libXext.la
-%attr(755,root,wheel) %{_libdir}/libXext.so
 %{_pkgconfigdir}/xext.pc
 %{_mandir}/man3/*.3*
-
 
 %files static
 %defattr(644,root,root,755)
