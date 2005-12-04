@@ -26,8 +26,8 @@ X extension library.
 Biblioteka rozszerzeñ X.
 
 %package devel
-Summary:	Header files libXext development
-Summary(pl):	Pliki nag³ówkowe do biblioteki libXext
+Summary:	Header files for libXext library
+Summary(pl):	Pliki nag³ówkowe biblioteki libXext
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-lib-libX11-devel
@@ -38,7 +38,7 @@ Obsoletes:	libXext-devel
 X extension library.
 
 This package contains the header files needed to develop programs that
-use these libXext.
+use libXext.
 
 %description devel -l pl
 Biblioteka rozszerzeñ X.
