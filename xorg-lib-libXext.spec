@@ -1,12 +1,12 @@
 Summary:	X extension library
 Summary(pl):	Biblioteka rozszerzeñ X
 Name:		xorg-lib-libXext
-Version:	0.99.2
+Version:	0.99.3
 Release:	0.1
 License:	MIT
 Group:		X11/Libraries
-Source0:	http://xorg.freedesktop.org/releases/X11R7.0-RC2/lib/libXext-%{version}.tar.bz2
-# Source0-md5:	03cfe5664067312b9b398891e40deb46
+Source0:	http://xorg.freedesktop.org/releases/X11R7.0-RC3/lib/libXext-%{version}.tar.bz2
+# Source0-md5:	9d9cf469ecea874853aeabc301e91221
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
@@ -15,7 +15,7 @@ BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.19
 BuildRequires:	xorg-lib-libX11-devel
 BuildRequires:	xorg-proto-xextproto-devel
-BuildRequires:	xorg-util-util-macros >= 0.99.1
+BuildRequires:	xorg-util-util-macros >= 0.99.2
 Obsoletes:	libXext
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -80,7 +80,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT \
-	libmandir=%{_mandir}/man3 \
 	pkgconfigdir=%{_pkgconfigdir}
 
 %clean
