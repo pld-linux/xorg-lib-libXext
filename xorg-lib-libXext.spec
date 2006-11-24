@@ -2,7 +2,7 @@ Summary:	X extension library
 Summary(pl):	Biblioteka rozszerzeñ X
 Name:		xorg-lib-libXext
 Version:	1.0.2
-Release:	2
+Release:	3
 License:	MIT
 Group:		X11/Libraries
 Source0:	http://xorg.freedesktop.org/releases/individual/lib/libXext-%{version}.tar.bz2
