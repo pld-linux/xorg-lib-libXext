@@ -1,5 +1,5 @@
 Summary:	X extension library
-Summary(pl):	Biblioteka rozszerzeñ X
+Summary(pl.UTF-8):   Biblioteka rozszerzeÅ„ X
 Name:		xorg-lib-libXext
 Version:	1.0.3
 Release:	1
@@ -22,12 +22,12 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 X extension library.
 
-%description -l pl
-Biblioteka rozszerzeñ X.
+%description -l pl.UTF-8
+Biblioteka rozszerzeÅ„ X.
 
 %package devel
 Summary:	Header files for libXext library
-Summary(pl):	Pliki nag³ówkowe biblioteki libXext
+Summary(pl.UTF-8):   Pliki nagÅ‚Ã³wkowe biblioteki libXext
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-lib-libX11-devel
@@ -40,15 +40,15 @@ X extension library.
 This package contains the header files needed to develop programs that
 use libXext.
 
-%description devel -l pl
-Biblioteka rozszerzeñ X.
+%description devel -l pl.UTF-8
+Biblioteka rozszerzeÅ„ X.
 
-Pakiet zawiera pliki nag³ówkowe niezbêdne do kompilowania programów
-u¿ywaj±cych biblioteki libXext.
+Pakiet zawiera pliki nagÅ‚Ã³wkowe niezbÄ™dne do kompilowania programÃ³w
+uÅ¼ywajÄ…cych biblioteki libXext.
 
 %package static
 Summary:	Static libXext library
-Summary(pl):	Biblioteka statyczna libXext
+Summary(pl.UTF-8):   Biblioteka statyczna libXext
 Group:		X11/Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 Obsoletes:	libXext-static
@@ -58,10 +58,10 @@ X extension library.
 
 This package contains the static libXext library.
 
-%description static -l pl
-Biblioteka rozszerzeñ X.
+%description static -l pl.UTF-8
+Biblioteka rozszerzeÅ„ X.
 
-Pakiet zawiera statyczn± bibliotekê libXext.
+Pakiet zawiera statycznÄ… bibliotekÄ™ libXext.
 
 %prep
 %setup -q -n libXext-%{version}
