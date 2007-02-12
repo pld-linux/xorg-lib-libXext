@@ -1,5 +1,5 @@
 Summary:	X extension library
-Summary(pl.UTF-8):   Biblioteka rozszerzeń X
+Summary(pl.UTF-8):	Biblioteka rozszerzeń X
 Name:		xorg-lib-libXext
 Version:	1.0.3
 Release:	1
@@ -27,7 +27,7 @@ Biblioteka rozszerzeń X.
 
 %package devel
 Summary:	Header files for libXext library
-Summary(pl.UTF-8):   Pliki nagłówkowe biblioteki libXext
+Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki libXext
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-lib-libX11-devel
@@ -48,7 +48,7 @@ używających biblioteki libXext.
 
 %package static
 Summary:	Static libXext library
-Summary(pl.UTF-8):   Biblioteka statyczna libXext
+Summary(pl.UTF-8):	Biblioteka statyczna libXext
 Group:		X11/Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 Obsoletes:	libXext-static
