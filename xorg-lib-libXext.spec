@@ -92,13 +92,21 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS COPYING ChangeLog
 %attr(755,root,root) %{_libdir}/libXext.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libXext.so.6
 
 %files devel
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libXext.so
 %{_libdir}/libXext.la
 %{_pkgconfigdir}/xext.pc
-%{_mandir}/man3/*.3x*
+%{_mandir}/man3/DBE.3x*
+%{_mandir}/man3/DPMS*.3x*
+%{_mandir}/man3/XShape*.3x*
+%{_mandir}/man3/XShm*.3x*
+%{_mandir}/man3/Xcup*.3x*
+%{_mandir}/man3/Xdbe*.3x*
+%{_mandir}/man3/Xevi*.3x*
+%{_mandir}/man3/Xmbuf*.3x*
 
 %files static
 %defattr(644,root,root,755)
