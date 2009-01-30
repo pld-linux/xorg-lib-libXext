@@ -1,12 +1,12 @@
 Summary:	X extension library
 Summary(pl.UTF-8):	Biblioteka rozszerzeń X
 Name:		xorg-lib-libXext
-Version:	1.0.4
-Release:	2
+Version:	1.0.5
+Release:	1
 License:	MIT
 Group:		X11/Libraries
 Source0:	http://xorg.freedesktop.org/releases/individual/lib/libXext-%{version}.tar.bz2
-# Source0-md5:	a91f1f722ac80c597cf0b75dcb8b48c0
+# Source0-md5:	aa11d859cc8e9a0bad3bb55e1666547b
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
@@ -14,7 +14,7 @@ BuildRequires:	cpp
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.19
 BuildRequires:	xorg-lib-libX11-devel
-BuildRequires:	xorg-proto-xextproto-devel
+BuildRequires:	xorg-proto-xextproto-devel >= 7.0.5
 BuildRequires:	xorg-util-util-macros >= 0.99.2
 Obsoletes:	libXext
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
