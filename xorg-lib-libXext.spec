@@ -13,8 +13,10 @@ BuildRequires:	automake
 BuildRequires:	cpp
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.19
-BuildRequires:	xorg-lib-libX11-devel
+BuildRequires:	xorg-lib-libXau-devel
+BuildRequires:	xorg-lib-libX11-devel >= 1.1.99.1
 BuildRequires:	xorg-proto-xextproto-devel >= 7.0.5
+BuildRequires:	xorg-proto-xproto-devel >= 7.0.13
 BuildRequires:	xorg-util-util-macros >= 0.99.2
 Obsoletes:	libXext
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -30,8 +32,10 @@ Summary:	Header files for libXext library
 Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki libXext
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
-Requires:	xorg-lib-libX11-devel
-Requires:	xorg-proto-xextproto-devel
+Requires:	xorg-lib-libXau-devel
+Requires:	xorg-lib-libX11-devel >= 1.1.99.1
+Requires:	xorg-proto-xextproto-devel >= 7.0.5
+Requires:	xorg-proto-xproto-devel >= 7.0.13
 Obsoletes:	libXext-devel
 
 %description devel
