@@ -34,7 +34,7 @@ Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-lib-libXau-devel
 Requires:	xorg-lib-libX11-devel >= 1.1.99.1
-Requires:	xorg-proto-xextproto-devel >= 7.0.5
+Requires:	xorg-proto-xextproto-devel >= 7.0.99.3
 Requires:	xorg-proto-xproto-devel >= 7.0.13
 Obsoletes:	libXext-devel
 
