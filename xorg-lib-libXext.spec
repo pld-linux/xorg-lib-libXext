@@ -2,7 +2,7 @@ Summary:	X extension library
 Summary(pl.UTF-8):	Biblioteka rozszerzeń X
 Name:		xorg-lib-libXext
 Version:	1.0.5
-Release:	2
+Release:	3
 Epoch:		1
 License:	MIT
 Group:		X11/Libraries
@@ -33,7 +33,7 @@ Biblioteka rozszerzeń X.
 Summary:	Header files for libXext library
 Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki libXext
 Group:		X11/Development/Libraries
-Requires:	%{name} = %{version}-%{release}
+Requires:	%{name} = %{epoch}:%{version}-%{release}
 Requires:	xorg-lib-libXau-devel
 Requires:	xorg-lib-libX11-devel >= 1.1.99.1
 Requires:	xorg-proto-xextproto-devel >= 1:7.0.5
@@ -57,7 +57,7 @@ używających biblioteki libXext.
 Summary:	Static libXext library
 Summary(pl.UTF-8):	Biblioteka statyczna libXext
 Group:		X11/Development/Libraries
-Requires:	%{name}-devel = %{version}-%{release}
+Requires:	%{name}-devel = %{epoch}:%{version}-%{release}
 Obsoletes:	libXext-static
 
 %description static
