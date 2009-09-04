@@ -1,13 +1,13 @@
 Summary:	X extension library
 Summary(pl.UTF-8):	Biblioteka rozszerzeń X
 Name:		xorg-lib-libXext
-Version:	1.0.5
-Release:	3
+Version:	1.0.99.4
+Release:	1
 Epoch:		1
 License:	MIT
 Group:		X11/Libraries
 Source0:	http://xorg.freedesktop.org/releases/individual/lib/libXext-%{version}.tar.bz2
-# Source0-md5:	aa11d859cc8e9a0bad3bb55e1666547b
+# Source0-md5:	24da44888b87c66edb326acec35b85aa
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
@@ -16,8 +16,7 @@ BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.19
 BuildRequires:	xorg-lib-libXau-devel
 BuildRequires:	xorg-lib-libX11-devel >= 1.1.99.1
-BuildRequires:	xorg-proto-xextproto-devel >= 1:7.0.5
-BuildRequires:	xorg-proto-xextproto-devel < 1:7.1.0
+BuildRequires:	xorg-proto-xextproto-devel >= 1:7.1.0
 BuildRequires:	xorg-proto-xproto-devel >= 7.0.13
 BuildRequires:	xorg-util-util-macros >= 0.99.2
 Obsoletes:	libXext
@@ -36,8 +35,7 @@ Group:		X11/Development/Libraries
 Requires:	%{name} = %{epoch}:%{version}-%{release}
 Requires:	xorg-lib-libXau-devel
 Requires:	xorg-lib-libX11-devel >= 1.1.99.1
-Requires:	xorg-proto-xextproto-devel >= 1:7.0.5
-Requires:	xorg-proto-xextproto-devel < 1:7.1.0
+Requires:	xorg-proto-xextproto-devel >= 1:7.1.0
 Requires:	xorg-proto-xproto-devel >= 7.0.13
 Obsoletes:	libXext-devel
 
@@ -104,6 +102,7 @@ rm -rf $RPM_BUILD_ROOT
 %files devel
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libXext.so
+%{_includedir}/X11/extensions/*.h
 %{_libdir}/libXext.la
 %{_pkgconfigdir}/xext.pc
 %{_mandir}/man3/DBE.3x*
