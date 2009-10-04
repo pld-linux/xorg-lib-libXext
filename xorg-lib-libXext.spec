@@ -1,5 +1,5 @@
-Summary:	X extension library
-Summary(pl.UTF-8):	Biblioteka rozszerzeń X
+Summary:	libXext - library for common extensions to the X11 protocol
+Summary(pl.UTF-8):	Biblioteka libXext powszechnych rozszerzeń protokołu X11
 Name:		xorg-lib-libXext
 Version:	1.1
 Release:	1
@@ -18,15 +18,15 @@ BuildRequires:	xorg-lib-libXau-devel
 BuildRequires:	xorg-lib-libX11-devel >= 1.1.99.1
 BuildRequires:	xorg-proto-xextproto-devel >= 1:7.1.0
 BuildRequires:	xorg-proto-xproto-devel >= 7.0.13
-BuildRequires:	xorg-util-util-macros >= 0.99.2
+BuildRequires:	xorg-util-util-macros >= 1.3
 Obsoletes:	libXext
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-X extension library.
+libXext - library for common extensions to the X11 protocol.
 
 %description -l pl.UTF-8
-Biblioteka rozszerzeń X.
+Biblioteka libXext powszechnych rozszerzeń protokołu X11.
 
 %package devel
 Summary:	Header files for libXext library
@@ -40,13 +40,13 @@ Requires:	xorg-proto-xproto-devel >= 7.0.13
 Obsoletes:	libXext-devel
 
 %description devel
-X extension library.
+libXext - library for common extensions to the X11 protocol.
 
 This package contains the header files needed to develop programs that
 use libXext.
 
 %description devel -l pl.UTF-8
-Biblioteka rozszerzeń X.
+Biblioteka libXext powszechnych rozszerzeń protokołu X11.
 
 Pakiet zawiera pliki nagłówkowe niezbędne do kompilowania programów
 używających biblioteki libXext.
@@ -59,12 +59,12 @@ Requires:	%{name}-devel = %{epoch}:%{version}-%{release}
 Obsoletes:	libXext-static
 
 %description static
-X extension library.
+libXext - library for common extensions to the X11 protocol.
 
 This package contains the static libXext library.
 
 %description static -l pl.UTF-8
-Biblioteka rozszerzeń X.
+Biblioteka libXext powszechnych rozszerzeń protokołu X11.
 
 Pakiet zawiera statyczną bibliotekę libXext.
 
@@ -95,7 +95,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS COPYING ChangeLog
+%doc AUTHORS COPYING ChangeLog README
 %attr(755,root,root) %{_libdir}/libXext.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libXext.so.6
 
