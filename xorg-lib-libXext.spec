@@ -2,7 +2,7 @@ Summary:	libXext - library for common extensions to the X11 protocol
 Summary(pl.UTF-8):	Biblioteka libXext powszechnych rozszerzeń protokołu X11
 Name:		xorg-lib-libXext
 Version:	1.1.1
-Release:	2
+Release:	3
 Epoch:		1
 License:	MIT
 Group:		X11/Libraries
@@ -87,6 +87,9 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR=$RPM_BUILD_ROOT \
 	pkgconfigdir=%{_pkgconfigdir}
 
+# in liblbxutil now
+%{__rm} $RPM_BUILD_ROOT%{_includedir}/X11/extensions/lbx{buf,bufstr,image}.h
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -102,8 +105,23 @@ rm -rf $RPM_BUILD_ROOT
 %files devel
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libXext.so
-%{_includedir}/X11/extensions/*.h
 %{_libdir}/libXext.la
+%{_includedir}/X11/extensions/MITMisc.h
+%{_includedir}/X11/extensions/XEVI.h
+%{_includedir}/X11/extensions/XLbx.h
+%{_includedir}/X11/extensions/XShm.h
+%{_includedir}/X11/extensions/Xag.h
+%{_includedir}/X11/extensions/Xcup.h
+%{_includedir}/X11/extensions/Xdbe.h
+%{_includedir}/X11/extensions/Xext.h
+%{_includedir}/X11/extensions/Xge.h
+%{_includedir}/X11/extensions/dpms.h
+%{_includedir}/X11/extensions/extutil.h
+%{_includedir}/X11/extensions/multibuf.h
+%{_includedir}/X11/extensions/security.h
+%{_includedir}/X11/extensions/shape.h
+%{_includedir}/X11/extensions/sync.h
+%{_includedir}/X11/extensions/xtestext1.h
 %{_pkgconfigdir}/xext.pc
 %{_mandir}/man3/DBE.3x*
 %{_mandir}/man3/DPMS*.3x*
