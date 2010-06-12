@@ -9,7 +9,7 @@ Group:		X11/Libraries
 Source0:	http://xorg.freedesktop.org/releases/individual/lib/libXext-%{version}.tar.bz2
 # Source0-md5:	9e51f9cb7e0a38c7099ac1c0de1a1add
 URL:		http://xorg.freedesktop.org/
-BuildRequires:	autoconf >= 2.57
+BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
 BuildRequires:	cpp
 BuildRequires:	libtool
