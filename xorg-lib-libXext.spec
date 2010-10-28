@@ -1,24 +1,26 @@
 Summary:	libXext - library for common extensions to the X11 protocol
 Summary(pl.UTF-8):	Biblioteka libXext powszechnych rozszerzeń protokołu X11
 Name:		xorg-lib-libXext
-Version:	1.1.2
+Version:	1.2.0
 Release:	1
 Epoch:		1
 License:	MIT
 Group:		X11/Libraries
 Source0:	http://xorg.freedesktop.org/releases/individual/lib/libXext-%{version}.tar.bz2
-# Source0-md5:	9e51f9cb7e0a38c7099ac1c0de1a1add
+# Source0-md5:	9bb236ff0193e9fc1c1fb504dd840331
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
 BuildRequires:	cpp
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.19
+BuildRequires:	xmlto >= 0.0.20
 BuildRequires:	xorg-lib-libXau-devel
 BuildRequires:	xorg-lib-libX11-devel >= 1.1.99.1
 BuildRequires:	xorg-proto-xextproto-devel >= 1:7.1.0
 BuildRequires:	xorg-proto-xproto-devel >= 7.0.13
-BuildRequires:	xorg-util-util-macros >= 1.3
+BuildRequires:	xorg-sgml-doctools >= 1.5
+BuildRequires:	xorg-util-util-macros >= 1.10
 Obsoletes:	libXext
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -84,11 +86,7 @@ Pakiet zawiera statyczną bibliotekę libXext.
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
-	DESTDIR=$RPM_BUILD_ROOT \
-	pkgconfigdir=%{_pkgconfigdir}
-
-# in liblbxutil now
-%{__rm} $RPM_BUILD_ROOT%{_includedir}/X11/extensions/lbx{buf,bufstr,image}.h
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -104,6 +102,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files devel
 %defattr(644,root,root,755)
+%doc specs/*.{html,css}
 %attr(755,root,root) %{_libdir}/libXext.so
 %{_libdir}/libXext.la
 %{_includedir}/X11/extensions/MITMisc.h
