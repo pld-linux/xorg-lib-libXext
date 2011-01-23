@@ -12,11 +12,12 @@ URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
 BuildRequires:	cpp
+BuildRequires:	docbook-dtd412-xml
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.19
 BuildRequires:	xmlto >= 0.0.20
-BuildRequires:	xorg-lib-libXau-devel
 BuildRequires:	xorg-lib-libX11-devel >= 1.1.99.1
+BuildRequires:	xorg-lib-libXau-devel
 BuildRequires:	xorg-proto-xextproto-devel >= 1:7.1.0
 BuildRequires:	xorg-proto-xproto-devel >= 7.0.13
 BuildRequires:	xorg-sgml-doctools >= 1.5
@@ -35,8 +36,8 @@ Summary:	Header files for libXext library
 Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki libXext
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{epoch}:%{version}-%{release}
-Requires:	xorg-lib-libXau-devel
 Requires:	xorg-lib-libX11-devel >= 1.1.99.1
+Requires:	xorg-lib-libXau-devel
 Requires:	xorg-proto-xextproto-devel >= 1:7.1.0
 Requires:	xorg-proto-xproto-devel >= 7.0.13
 Obsoletes:	libXext-devel
