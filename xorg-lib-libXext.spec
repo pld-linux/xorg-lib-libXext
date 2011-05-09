@@ -1,13 +1,13 @@
 Summary:	libXext - library for common extensions to the X11 protocol
 Summary(pl.UTF-8):	Biblioteka libXext powszechnych rozszerzeń protokołu X11
 Name:		xorg-lib-libXext
-Version:	1.2.0
+Version:	1.3.0
 Release:	1
 Epoch:		1
 License:	MIT
 Group:		X11/Libraries
 Source0:	http://xorg.freedesktop.org/releases/individual/lib/libXext-%{version}.tar.bz2
-# Source0-md5:	9bb236ff0193e9fc1c1fb504dd840331
+# Source0-md5:	161d200b690ace818db1cc7537e70ba9
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
@@ -15,13 +15,13 @@ BuildRequires:	cpp
 BuildRequires:	docbook-dtd412-xml
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.19
-BuildRequires:	xmlto >= 0.0.20
+BuildRequires:	xmlto >= 0.0.22
 BuildRequires:	xorg-lib-libX11-devel >= 1.1.99.1
 BuildRequires:	xorg-lib-libXau-devel
-BuildRequires:	xorg-proto-xextproto-devel >= 1:7.1.0
+BuildRequires:	xorg-proto-xextproto-devel >= 1:7.1.99
 BuildRequires:	xorg-proto-xproto-devel >= 7.0.13
-BuildRequires:	xorg-sgml-doctools >= 1.5
-BuildRequires:	xorg-util-util-macros >= 1.10
+BuildRequires:	xorg-sgml-doctools >= 1.7
+BuildRequires:	xorg-util-util-macros >= 1.12
 Obsoletes:	libXext
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -38,7 +38,7 @@ Group:		X11/Development/Libraries
 Requires:	%{name} = %{epoch}:%{version}-%{release}
 Requires:	xorg-lib-libX11-devel >= 1.1.99.1
 Requires:	xorg-lib-libXau-devel
-Requires:	xorg-proto-xextproto-devel >= 1:7.1.0
+Requires:	xorg-proto-xextproto-devel >= 1:7.1.99
 Requires:	xorg-proto-xproto-devel >= 7.0.13
 Obsoletes:	libXext-devel
 
@@ -103,7 +103,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files devel
 %defattr(644,root,root,755)
-%doc specs/*.{html,css}
+%doc specs/*.html
 %attr(755,root,root) %{_libdir}/libXext.so
 %{_libdir}/libXext.la
 %{_includedir}/X11/extensions/MITMisc.h
