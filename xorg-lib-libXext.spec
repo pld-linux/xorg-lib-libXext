@@ -1,13 +1,13 @@
 Summary:	libXext - library for common extensions to the X11 protocol
 Summary(pl.UTF-8):	Biblioteka libXext powszechnych rozszerzeń protokołu X11
 Name:		xorg-lib-libXext
-Version:	1.3.0
+Version:	1.3.1
 Release:	1
 Epoch:		1
 License:	MIT
 Group:		X11/Libraries
 Source0:	http://xorg.freedesktop.org/releases/individual/lib/libXext-%{version}.tar.bz2
-# Source0-md5:	161d200b690ace818db1cc7537e70ba9
+# Source0-md5:	71251a22bc47068d60a95f50ed2ec3cf
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
@@ -20,8 +20,9 @@ BuildRequires:	xorg-lib-libX11-devel >= 1.1.99.1
 BuildRequires:	xorg-lib-libXau-devel
 BuildRequires:	xorg-proto-xextproto-devel >= 1:7.1.99
 BuildRequires:	xorg-proto-xproto-devel >= 7.0.13
-BuildRequires:	xorg-sgml-doctools >= 1.7
+BuildRequires:	xorg-sgml-doctools >= 1.8
 BuildRequires:	xorg-util-util-macros >= 1.12
+Requires:	xorg-lib-libX11 >= 1.1.99.1
 Obsoletes:	libXext
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
