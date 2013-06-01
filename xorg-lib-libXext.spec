@@ -1,13 +1,13 @@
 Summary:	libXext - library for common extensions to the X11 protocol
 Summary(pl.UTF-8):	Biblioteka libXext powszechnych rozszerzeń protokołu X11
 Name:		xorg-lib-libXext
-Version:	1.3.1
+Version:	1.3.2
 Release:	1
 Epoch:		1
 License:	MIT
 Group:		X11/Libraries
 Source0:	http://xorg.freedesktop.org/releases/individual/lib/libXext-%{version}.tar.bz2
-# Source0-md5:	71251a22bc47068d60a95f50ed2ec3cf
+# Source0-md5:	4376101e51bb2c6c44d9ab14344e85ad
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
@@ -124,14 +124,14 @@ rm -rf $RPM_BUILD_ROOT
 %{_includedir}/X11/extensions/sync.h
 %{_includedir}/X11/extensions/xtestext1.h
 %{_pkgconfigdir}/xext.pc
-%{_mandir}/man3/DBE.3x*
-%{_mandir}/man3/DPMS*.3x*
-%{_mandir}/man3/XShape*.3x*
-%{_mandir}/man3/XShm*.3x*
-%{_mandir}/man3/Xcup*.3x*
-%{_mandir}/man3/Xdbe*.3x*
-%{_mandir}/man3/Xevi*.3x*
-%{_mandir}/man3/Xmbuf*.3x*
+%{_mandir}/man3/DBE.3*
+%{_mandir}/man3/DPMS*.3*
+%{_mandir}/man3/XShape*.3*
+%{_mandir}/man3/XShm*.3*
+%{_mandir}/man3/Xcup*.3*
+%{_mandir}/man3/Xdbe*.3*
+%{_mandir}/man3/Xevi*.3*
+%{_mandir}/man3/Xmbuf*.3*
 
 %files static
 %defattr(644,root,root,755)
