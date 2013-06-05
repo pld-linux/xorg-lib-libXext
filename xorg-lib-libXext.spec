@@ -15,6 +15,7 @@ BuildRequires:	cpp
 BuildRequires:	docbook-dtd412-xml
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.19
+BuildRequires:	sed >= 4.0
 BuildRequires:	xmlto >= 0.0.22
 BuildRequires:	xorg-lib-libX11-devel >= 1.1.99.1
 BuildRequires:	xorg-lib-libXau-devel
@@ -75,13 +76,17 @@ Pakiet zawiera statyczną bibliotekę libXext.
 %prep
 %setup -q -n libXext-%{version}
 
+# support __libmansuffix__ with "x" suffix (per FHS 2.3)
+%{__sed} -i -e 's,\.so man__libmansuffix__/,.so man3/,' man/*.man
+
 %build
 %{__libtoolize}
 %{__aclocal}
 %{__autoconf}
 %{__autoheader}
 %{__automake}
-%configure
+%configure \
+	--without-fop
 %{__make}
 
 %install
