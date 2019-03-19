@@ -1,14 +1,14 @@
 Summary:	libXext - library for common extensions to the X11 protocol
 Summary(pl.UTF-8):	Biblioteka libXext powszechnych rozszerzeń protokołu X11
 Name:		xorg-lib-libXext
-Version:	1.3.3
-Release:	2
+Version:	1.3.4
+Release:	1
 Epoch:		1
 License:	MIT
 Group:		X11/Libraries
-Source0:	http://xorg.freedesktop.org/releases/individual/lib/libXext-%{version}.tar.bz2
-# Source0-md5:	52df7c4c1f0badd9f82ab124fb32eb97
-URL:		http://xorg.freedesktop.org/
+Source0:	https://xorg.freedesktop.org/releases/individual/lib/libXext-%{version}.tar.bz2
+# Source0-md5:	f5b48bb76ba327cd2a8dc7a383532a95
+URL:		https://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
 BuildRequires:	cpp
@@ -95,6 +95,9 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+# (.html version) packaged as %doc
+%{__rm} $RPM_BUILD_ROOT%{_docdir}/libXext/{dbelib,dpmslib,shapelib,synclib,xtest1}.*
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -103,7 +106,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS COPYING ChangeLog README
+%doc AUTHORS COPYING ChangeLog README.md
 %attr(755,root,root) %{_libdir}/libXext.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libXext.so.6
 
