@@ -1,3 +1,7 @@
+#
+# Conditional build:
+%bcond_without	static_libs	# static library
+
 Summary:	libXext - library for common extensions to the X11 protocol
 Summary(pl.UTF-8):	Biblioteka libXext powszechnych rozszerzeń protokołu X11
 Name:		xorg-lib-libXext
@@ -15,6 +19,7 @@ BuildRequires:	cpp
 BuildRequires:	docbook-dtd43-xml
 BuildRequires:	libtool >= 2:2
 BuildRequires:	pkgconfig >= 1:0.19
+BuildRequires:	rpmbuild(macros) >= 1.527
 BuildRequires:	sed >= 4.0
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	xmlto >= 0.0.22
@@ -88,6 +93,7 @@ Pakiet zawiera statyczną bibliotekę libXext.
 %{__autoheader}
 %{__automake}
 %configure \
+	%{__enable_disable static_libs static} \
 	--without-fop
 %{__make}
 
@@ -143,6 +149,8 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man3/Xevi*.3*
 %{_mandir}/man3/Xmbuf*.3*
 
+%if %{with static_libs}
 %files static
 %defattr(644,root,root,755)
 %{_libdir}/libXext.a
+%endif
